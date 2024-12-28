@@ -6,7 +6,7 @@ struct LazySegTree {
         n = _n; t = vector<ll>(4*n, 0); lazy = vector<ll>(4*n, 0);
     }
     LazySegTree(vector<ll>& arr) {
-        n = _n; t = vector<ll>(4*n, 0); lazy = vector<ll>(4*n, 0);
+        n = arr.size(); t = vector<ll>(4*n, 0); lazy = vector<ll>(4*n, 0);
         build(arr, 1, 0, n-1); // same as in simple SegmentTree
     }
     void push(int v) {
